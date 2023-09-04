@@ -1,4 +1,5 @@
-<h1 mat-dialog-title color="warn">{{ product.id ? 'updateproduct' : 'addproduct' | translate }}</h1>
+<h1 mat-dialog-title color="warn" *ngIf="product.id">{{ 'updateproduct' | translate }}</h1>
+<h1 mat-dialog-title color="warn" *ngIf="!product.id">{{ 'addproduct' | translate }}</h1>
 <div mat-dialog-content>
     <div class="add-product-form">
         <form [formGroup]="productsForm" (ngSubmit)="onSubmit()">
@@ -22,7 +23,8 @@
                 <mat-label>{{ 'image' | translate }}</mat-label>
                 <input matInput formControlName="image">
             </mat-form-field>
-            <button mat-raised-button color="primary" [disabled]="!productsForm.valid">{{ product.id ? 'updateproduct' : 'addproduct' | translate }}</button>
+            <button mat-raised-button color="primary" [disabled]="!productsForm.valid" *ngIf="product.id">{{ 'updateproduct' | translate }}</button>
+            <button mat-raised-button color="primary" [disabled]="!productsForm.valid" *ngIf="!product.id">{{ 'addproduct' | translate }}</button>
         </form>
     </div>
 </div>

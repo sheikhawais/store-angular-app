@@ -42,6 +42,7 @@ export class AddEditProductComponent {
             product.id = this.product.id;
             this.updateProduct(product);
         } else {
+            product.rating = {rate: 0 , count: 0};
             this.addProduct(product);
         }
     }
@@ -62,6 +63,7 @@ export class AddEditProductComponent {
         this._productsService.addProduct(product)
         .subscribe({
             next: (response: any) => {
+                response.rating = {rate: 0 , count: 0};
                 this.dialogRef.close(response);
             },
             error: (error: HttpErrorResponse) => {

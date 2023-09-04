@@ -13,9 +13,9 @@ import { AddEditProductComponent } from './components/add-edit-product/add-edit-
 import { ProductShopComponent } from './components/product-shop/product-shop.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { StarRatingComponent } from '../shared/components/star-rating/star-rating.component';
-import { MatChip, MatChipsModule } from '@angular/material/chips';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ReactiveFormsModule } from '@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -37,6 +37,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         StarRatingComponent,
         MatChipsModule,
         ReactiveFormsModule,
+        MatSnackBarModule,
         SharedModule
     ],
     providers: [

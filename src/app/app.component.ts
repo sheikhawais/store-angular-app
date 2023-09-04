@@ -12,7 +12,7 @@ export class AppComponent {
     constructor(private translate: TranslateService) {
         translate.addLangs(['en', 'ar']);
         translate.setDefaultLang('en');
-        translate.use('ar');
-        document.getElementsByTagName('body')[0].setAttribute('class', 'direction-rtl');
+        translate.use('en');
+        document.getElementsByTagName('body')[0].setAttribute('class', 'direction-ltr');
     }
 }

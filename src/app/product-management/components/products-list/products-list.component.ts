@@ -8,6 +8,7 @@ import { Product } from '../../models/products.model';
 import { DeleteConfirmationPopupComponent } from '../delete-confirmation-popup/delete-confirmation-popup.component';
 import { ProductDetailsComponent } from '../product-details/product-details.component';
 import { AddEditProductComponent } from '../add-edit-product/add-edit-product.component';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
     selector: 'app-products-list',
@@ -23,7 +24,8 @@ export class ProductsListComponent {
 
     constructor(
         private _productsService: ProductsService,
-        private dialog: MatDialog
+        private dialog: MatDialog,
+        private _snackBar: MatSnackBar
     ) { }
 
     ngOnInit() {
@@ -70,6 +72,17 @@ export class ProductsListComponent {
             },
             enterAnimationDuration: '500ms',
             exitAnimationDuration: '500ms'
+        })
+        .afterClosed()
+        .subscribe((product: Product) => {
+            if (product) {
+                const data = this.dataSource.data;
+                data.unshift(product);
+                this.dataSource.data = data;
+                this._snackBar.open('Product Added Successfully!', 'Got it', {
+                    duration: 3000
+                });
+            }
         });
     }
 
@@ -79,7 +92,23 @@ export class ProductsListComponent {
             data: product,
             enterAnimationDuration: '500ms',
             exitAnimationDuration: '500ms'
+        })
+        .afterClosed()
+        .subscribe((product: Product) => {
+            if (product) {
+                this._snackBar.open('Product Updated Successfully!', 'Got it', {
+                    duration: 3000
+                });
+                this.updateProduct(product); // refresh the product list
+            }
         });
+    }
+
+    updateProduct(product: Product) {
+        const data = this.dataSource.data;
+        const index = data.findIndex((p: Product) => p.id === product.id);
+        data[index] = {...product, rating: data[index].rating};
+        this.dataSource.data = data;
     }
 
     deleteProduct(id: number, title: string) {
