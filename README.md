@@ -15,10 +15,10 @@ Install the Angular CLI globally:
 npm install -g @angular/cli
 ```
 
-Create workspace:
+Install Dependencies:
 
 ```
-ng new [PROJECT NAME]
+npm install or npm i
 ```
 
 Run the application:
