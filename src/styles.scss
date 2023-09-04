@@ -1,1 +1,52 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.app-link {
+    text-decoration: none;
+    color: #000000;
+    &:hover {
+        color: #673ab7;
+    }
+}
+
+.full-width {
+    width: 100%;
+}
+
+.text-ellipsis {
+    white-space: nowrap;      /* Prevent text from wrapping to the next line */
+    overflow: hidden;         /* Hide overflowing content */
+    text-overflow: ellipsis; /* Display an ellipsis (...) when text overflows */
+}
+
+.button-space {
+    margin-left: 15px;
+}
+
+
+// Language direction styles
+.direction-rtl {
+    direction: rtl;
+    table {
+        tr {
+            td, th {
+                text-align: right;
+            }
+        }
+    }
+
+    .mdc-dialog {
+        &__container {
+            direction: rtl;
+        }
+        &__title,
+        &__content {
+            text-align: right;
+        }
+        .mat-mdc-form-field {
+            direction: rtl;
+        }
+    }
+}

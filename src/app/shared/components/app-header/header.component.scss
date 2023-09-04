@@ -1,0 +1,43 @@
+#header-wrapper {
+    width: 100%;
+    height: 75px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px #cccccc;
+    .header {
+        width: 100%;
+        height: 100%;
+        max-width: 1170px;
+        margin: 0 auto;
+        position: relative;
+        display: flex;
+        align-items: center;
+        .logo-container {
+            flex-grow: 1;
+            .app-logo {
+                width: 70px;
+                border-radius: 5px;
+                overflow: hidden;
+                display: flex;
+                font-size: 16px;
+                font-weight: bold;
+                border: solid 1px #cccccc;
+                zoom: 1.7;
+                box-shadow: 0 0 10px #cccccc;
+                .left {
+                    padding: 5px 7px;
+                    background-color: #673ab7;
+                    color: #ffffff;
+                }
+                .right {
+                    font-size: 14px;
+                    width: 50px;
+                    padding: 5px 3px;
+                    color: #000000;
+                }
+            }
+        }
+        .lang-change {
+            margin: 0 30px;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+<div class="login-container">
+    <div fxLayout="row">
+        <div fxFlex="100">
+            <div class="login-card-container">
+                <mat-card class="login-card">
+                    <mat-card-content>
+                        <h2>Login</h2>
+                        <p>Please enter username and password to login</p>
+                        <mat-form-field class="full-width">
+                            <input matInput placeholder="Email" type="email" [(ngModel)]="email" (input)="error = ''" required>
+                        </mat-form-field>
+                        <mat-form-field class="full-width">
+                            <input matInput placeholder="Password" type="password" [(ngModel)]="password" (input)="error = ''" required>
+                        </mat-form-field>
+                        <mat-error *ngIf="error">{{ error }}</mat-error>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button id="login-button" mat-raised-button color="primary" (click)="login()" [disabled]="!(email && password) ">Login</button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

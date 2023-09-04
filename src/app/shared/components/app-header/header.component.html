@@ -1,0 +1,18 @@
+<div id="header-wrapper">
+    <div class="header">
+        <div class="logo-container">
+            <div class="app-logo">
+                <div class="left">ai</div>
+                <div class="right">Shop</div>
+            </div>
+        </div>
+        <div class="lang-change">
+            <a href="javascript:" mat-button [color]="currentLanguage === 'en' ? 'primary' : 'basic'" (click)="changeLanguage('en')">EN</a> | 
+            <a href="javascript:" mat-button [color]="currentLanguage === 'ar' ? 'primary' : 'basic'" (click)="changeLanguage('ar')">AR</a>
+        </div>
+        <div class="user-details">
+            {{'welcome' | translate }}, <strong class="user-name">{{ isAdmin ? 'Admin' : 'User' }}</strong> 
+            <div><a href="javascript:" (click)="logout()">{{ 'logout' | translate }}</a></div>
+        </div>
+    </div>
+</div>

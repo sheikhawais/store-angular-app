@@ -27,3 +27,10 @@ Run the application:
 cd [PROJECT NAME]
 ng serve
 ```
+
+Test coverge:
+
+```
+cd [PROJECT NAME]
+ng test --no-watch --code-coverage
+```
