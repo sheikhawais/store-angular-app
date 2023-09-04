@@ -1,0 +1,15 @@
+{
+    "welcome": "Welcome",
+    "logout": "Logout",
+    "id": "ID",
+    "title": "Title",
+    "price": "Price",
+    "rating": "Rating",
+    "category": "Category",
+    "actions": "Actions",
+    "addnewproduct": "Add New Product",
+    "image": "Image",
+    "description": "Description",
+    "addproduct": "Add Product",
+    "updateproduct": "Update Product"
+}

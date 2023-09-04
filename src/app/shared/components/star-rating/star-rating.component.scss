@@ -1,0 +1,11 @@
+.star-rating {
+    display: inline-block;
+    font-size: 24px; /* Adjust the font size as needed */
+    mat-icon {
+        cursor: pointer;
+        color: #cccccc;
+        &.active {
+            color: goldenrod; /* Color of filled stars */
+        }
+    }
+}

@@ -1,0 +1,8 @@
+<h1 mat-dialog-title color="warn">Delete Product</h1>
+<div mat-dialog-content>
+    Would you like to delete <strong>{{ data.title }}</strong>
+</div>
+<div mat-dialog-actions>
+    <button mat-raised-button mat-dialog-close>No</button>
+    <button mat-raised-button cdkFocusInitial color="warn" class="delete-btn" (click)="deleteProduct(data.id)">Yes</button>
+</div>

@@ -1,0 +1,10 @@
+.products-list-container {
+    .add-product {
+        margin-bottom: 15px;
+        text-align: right;
+    }
+    .table-container {
+        overflow-x: auto; /* Enable horizontal scrolling */
+        max-width: 100%; /* Ensure the table doesn't overflow its container */
+    }
+}

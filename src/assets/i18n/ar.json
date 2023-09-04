@@ -1,0 +1,15 @@
+{
+    "welcome": "مرحباً",
+    "logout": "تسجيل خروج",
+    "id": "بطاقة تعريف",
+    "title": "عنوان",
+    "price": "سعر",
+    "rating": "تقييم",
+    "category": "فئة",
+    "actions": "أجراءات",
+    "addnewproduct": "إضافة منتج جديد",
+    "image": "صورة",
+    "description": "وصف",
+    "addproduct": "إضافة منتج",
+    "updateproduct": "تحديث المنتج"
+}

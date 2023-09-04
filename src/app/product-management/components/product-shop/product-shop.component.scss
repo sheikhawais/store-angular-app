@@ -1,0 +1,66 @@
+.shop-container {
+    .categories-list {
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    .products-list {
+        margin-right: -30px; // a bad fix for something
+        .product {
+            overflow: hidden;
+            margin-bottom: 30px;
+            box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+            display: flex;
+            flex-direction: column;
+            mat-card-header {
+                flex-shrink: 0;
+                &::ng-deep .mat-mdc-card-header-text {
+                    width: 100%;
+                }
+            }
+            mat-card-title {
+                h3 {
+                    font-weight: bold;
+                    width: 100%;
+                }
+            }
+            mat-card-content {
+                flex-grow: 1;
+                .product-image {
+                    width: 100%;
+                    height: 200px;
+                    overflow: hidden;
+                    box-sizing: border-box;
+                    padding: 10px;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                }
+                .price-rating-row {
+                    padding: 15px 0;
+                    display: flex;
+                    justify-content: space-between;
+                    .star-rating {
+                        display: flex;
+                        align-items: center;
+                        span {
+                            font-size: 12px;
+                            font-weight: bold;
+                            margin-left: 5px;
+                            color: #666666;
+                        }
+                    }
+                }
+                .product-description,
+                .product-category {
+                    text-transform: capitalize;
+                }
+            }
+            mat-card-actions {
+                padding: 15px;
+                justify-content: space-around;
+            }
+        }
+    }
+}

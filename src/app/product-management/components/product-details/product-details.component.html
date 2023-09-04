@@ -1,0 +1,17 @@
+<h1 mat-dialog-title color="warn">{{ product.title }}</h1>
+<div mat-dialog-content>
+    <div class="product-image">
+        <img [src]="product.image" [alt]="product.title"/>
+    </div>
+    <div class="price-rating-row">
+        <div class="price" fxLayoutAlign="start center">
+            <mat-icon>attach_money</mat-icon> {{ product.price }}
+        </div>
+        <div class="star-rating">
+            <app-star-rating [rating]="product.rating?.rate || 0"></app-star-rating> 
+            <span>({{ product.rating?.count }})</span>
+        </div>
+    </div>
+    <h3 class="product-category"><strong>Category:</strong> {{ product.category }}</h3>
+    <p class="product-description">{{ product.description }}</p>
+</div>
