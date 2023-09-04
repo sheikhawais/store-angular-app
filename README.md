@@ -1,5 +1,5 @@
 # store-angular-app
-A basic product store
+A basic e-commerce store web app that will facilitate the shopping experience.
 
 ## Development Setup
 
@@ -24,13 +24,11 @@ npm install or npm i
 Run the application:
 
 ```
-cd [PROJECT NAME]
 ng serve
 ```
 
-Test coverge:
+Test code coverage:
 
 ```
-cd [PROJECT NAME]
 ng test --no-watch --code-coverage
 ```
